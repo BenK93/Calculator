@@ -1,0 +1,23 @@
+version: "3"
+services:
+  api:
+    container_name: api
+    build:
+      dockerfile: Dockerfile
+      context: "./server"
+    ports :
+      - "8000:8000"
+    volumes:
+      - ./server:/home/node/app
+  client:
+    build:
+      dockerfile: Dockerfile
+      context: ./client
+    ports :
+      - "3000:3000"
+    links :
+      - api
+    volumes:
+      - ./client:/home/node/app
+    depends_on:
+      - api
