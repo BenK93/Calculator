@@ -3,7 +3,7 @@
 # Installation
 - Clone the repository
 ```
-git clone https://github.com/Philippe-Collignon/rest-api-node-jwt-typescript.git
+git clone https://github.com/BenK93/Calculator.git
 ```
 - Install dependencies
 ```
